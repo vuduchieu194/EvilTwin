@@ -22,7 +22,7 @@ echo "done rule "
 
 #enable ip forwarding //done
 sudo su <<HERE
-sudo echo 0 > /proc/sys/net/ipv4/ip_forward
+sudo echo 1 > /proc/sys/net/ipv4/ip_forward
 HERE
 echo "done ipfw "
 
